@@ -8,11 +8,13 @@ namespace LetterLoops
     {
         static void LetterLoop(string input)
         {
+
             string[] letters = input.Split(",");
             List<string> printLetters = new List<string>();
 
             for (int i = 0; i < letters.Length; i++)
             {
+
                 int count = i + 1;
                 List<string> temp = new List<string>(); // creates new Array for each letter
                 
@@ -26,7 +28,6 @@ namespace LetterLoops
                     {
                         temp.Add(letters[i]);
                     }
-
                 }
 
                 temp.Add("-"); // adds hyphen to the end of the array for style purposes
@@ -34,12 +35,13 @@ namespace LetterLoops
 
             }
             
-            string lettersList = String.Join("", printLetters);
-            Console.WriteLine($"{lettersList}");
+            string output = String.Join("", printLetters);
+            Console.WriteLine($"{output}");
 
         }
         static void Main(string[] args)
         {
+
             string input;
 
             do
